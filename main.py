@@ -90,7 +90,6 @@ airtime = 0
 
 
 player_rect = pygame.Rect(50, 50, player_sprite.get_width(), player_sprite.get_height()) # player collision mask
-coll_rect = pygame.Rect(100,100,100,50)
 parallax_obj = [[0.15,[100,10,50,500]]]
 
 
@@ -100,7 +99,7 @@ while True:
     display.fill((146, 234, 254))
 
     scrolls[0] += (player_rect.x-scrolls[0]-160)/20     # screen is 300px wide, half of that is +- 150, allows us to lock screen to player
-    scrolls[1] += (player_rect.y-scrolls[1]-120)/20      # same concept
+    scrolls[1] += (player_rect.y-scrolls[1]-110)/20      # same concept
     scroll = scrolls.copy()
     scroll[0] = int(scroll[0])
     scroll[1] = int(scroll[1])
